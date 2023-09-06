@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="638.0" prefWidth="772.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lab_4.HelloController">
+    <!-- Таблица в которую мы будем выводит данные -->
+
+    <AnchorPane layoutY="-8.0" prefHeight="78.0" prefWidth="772.0" style="-fx-background-color: #0098C9;">
+        <children>
+            <Label layoutX="322.0" layoutY="28.0" text="Справочник" textAlignment="CENTER" textFill="WHITE">
+                <font>
+                    <Font name="System Bold" size="21.0" />
+                </font>
+            </Label>
+        </children>
+    </AnchorPane>
+
+    <ComboBox fx:id="combo" layoutX="61.0" layoutY="135.0" prefHeight="26.0" prefWidth="201.0" promptText="Выберите город" />
+
+    <TableView fx:id="tablePizzas" layoutX="61.0" layoutY="189.0" prefHeight="234.0" prefWidth="634.0">
+        <columns>
+            <!-- Колонки таблицы -->
+            <TableColumn fx:id="numberCol" prefWidth="58.0" text="№" />
+            <TableColumn fx:id="cityCol" prefWidth="122.19998931884766" text="Город" />
+            <TableColumn fx:id="nameCol" prefWidth="123.20001220703125" text="Название" />
+            <TableColumn fx:id="sizeCol" prefWidth="124.0" text="Размер" />
+            <TableColumn fx:id="priceCol" prefWidth="101.59994506835938" text="Цена" />
+            <TableColumn fx:id="massCol" prefWidth="99.0" text="Масса" />
+
+        </columns>
+    </TableView>
+    <Label layoutX="61.0" layoutY="107.0" text="Поиск по городу:" />
+    <Button layoutX="587.0" layoutY="122.0" mnemonicParsing="false" onAction="#getCity" prefHeight="26.0" prefWidth="106.0" style="-fx-background-color: #0098C9;" text="Поиск" textAlignment="CENTER" textFill="WHITE">
+        <font>
+            <Font name="System Bold" size="12.0" />
+        </font>
+        <cursor>
+            <Cursor fx:constant="HAND" />
+        </cursor>
+    </Button>
+    <Button layoutX="333.0" layoutY="441.0" mnemonicParsing="false" onAction="#getAll" prefHeight="26.0" prefWidth="106.0" style="-fx-background-color: #0098C9;" text="Показать все" textAlignment="CENTER" textFill="WHITE">
+        <font>
+            <Font name="System Bold" size="12.0" />
+        </font>
+        <cursor>
+            <Cursor fx:constant="HAND" />
+        </cursor>
+    </Button>
+   <ComboBox fx:id="combo_2" layoutX="295.0" layoutY="135.0" prefHeight="26.0" prefWidth="201.0" promptText="Выберите пиццу" />
+   <Label layoutX="297.0" layoutY="107.0" text="Поиск по названию" />
+
+   <TextField fx:id="cityColRe" layoutX="191.0" layoutY="571.0" prefHeight="26.0" prefWidth="110.0" />
+
+
+   <Label layoutX="191.0" layoutY="548.0" text="Город" />
+
+    <Button layoutX="450.0" layoutY="564.0" mnemonicParsing="false" onAction="#UpdatePizza" prefHeight="26.0" prefWidth="106.0" style="-fx-background-color: #0098C9;" text="Обновить" textAlignment="CENTER" textFill="WHITE">
+        <font>
+            <Font name="System Bold" size="12.0" />
+        </font>
+        <cursor>
+            <Cursor fx:constant="HAND" />
+        </cursor>
+    </Button>
+   <Pane layoutX="57.0" layoutY="513.0" prefHeight="1.0" prefWidth="634.0" style="-fx-background-color: #bfe6f2;" />
+</AnchorPane>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lab_3.AddishController">
+    <children>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: white;">
+                <children>
+                    <Button layoutX="246.0" layoutY="310.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="106.0"
+                            style="-fx-background-color: #0098C9;" text="Добавить" textAlignment="CENTER" textFill="WHITE"
+                    onAction="#addNewAddish">
+                        <font>
+                            <Font name="System Bold" size="12.0" />
+                        </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+                    <ComboBox fx:id="combo" layoutX="200.0" layoutY="190.0" prefHeight="26.0" prefWidth="201.0" promptText="Тип" />
+                    <Label layoutX="200.0" layoutY="98.0" text="Введите название" />
+                    <Label layoutX="200.0" layoutY="166.0" prefHeight="18.0" prefWidth="84.0" text="Выберите тип " />
+                    <TextField fx:id="name" layoutX="200.0" layoutY="122.0" prefHeight="26.0" prefWidth="201.0" promptText="Название " />
+                    <TextField fx:id="price" layoutX="199.0" layoutY="257.0" prefHeight="26.0" prefWidth="202.0" promptText="Цена" />
+                    <Label layoutX="200.0" layoutY="233.0" text="Укажите стоимость" />
+                    <AnchorPane layoutY="-8.0" prefHeight="78.0" prefWidth="600.0" style="-fx-background-color: #0098C9;">
+                        <children>
+                            <Label layoutX="123.0" layoutY="27.0" text="Добавить дополнительное блюдо" textAlignment="CENTER" textFill="WHITE">
+                                <font>
+                                    <Font name="System Bold" size="21.0" />
+                                </font>
+                            </Label>
+                        </children>
+                    </AnchorPane>
+            <Hyperlink fx:id="toDictionary" layoutX="226.0" layoutY="353.0" onAction="#openDictionary" text="Перейти к справочнику" textFill="#0098c9" underline="true">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Hyperlink>
+                </children>
+      </AnchorPane>
+
+    </children>
+</AnchorPane>

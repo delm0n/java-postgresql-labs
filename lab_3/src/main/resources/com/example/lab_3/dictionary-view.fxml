@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lab_3.DictionaryController">
+    <!-- Таблица в которую мы будем выводит данные -->
+
+    <AnchorPane layoutY="-8.0" prefHeight="78.0" prefWidth="600.0" style="-fx-background-color: #0098C9;">
+        <children>
+            <Label layoutX="236.0" layoutY="28.0" text="Справочник" textAlignment="CENTER" textFill="WHITE">
+                <font>
+                    <Font name="System Bold" size="21.0" />
+                </font>
+            </Label>
+        </children>
+    </AnchorPane>
+
+    <ComboBox fx:id="combo" layoutX="199.0" layoutY="124.0" prefHeight="26.0" prefWidth="201.0" promptText="Тип" />
+
+    <TableView fx:id="tableAddish" layoutX="12.0" layoutY="238.0" prefHeight="74.0" prefWidth="575.0">
+        <columns>
+            <!-- Колонки таблицы -->
+            <TableColumn fx:id="idCol" prefWidth="80.0" text="№" />
+            <TableColumn fx:id="nameCol" prefWidth="150.0" text="Название" />
+            <TableColumn fx:id="priceCol" prefWidth="150.0" text="Цена" />
+            <TableColumn fx:id="typeCol" prefWidth="193.59999389648442" text="Тип" />
+        </columns>
+    </TableView>
+   <Label layoutX="202.0" layoutY="99.0" text="Поиск блюда по типу:" />
+    <Hyperlink fx:id="toAddish" layoutX="250.0" layoutY="352.0" onAction="#openAddish" text="Добавить блюдо" textFill="#0098c9" underline="true">
+        <cursor>
+            <Cursor fx:constant="HAND" />
+        </cursor>
+    </Hyperlink>
+    <Button layoutX="247.0" layoutY="177.0" mnemonicParsing="false" onAction="#whereType" prefHeight="26.0" prefWidth="106.0" style="-fx-background-color: #0098C9;" text="Поиск" textAlignment="CENTER" textFill="WHITE">
+        <font>
+            <Font name="System Bold" size="12.0" />
+        </font>
+        <cursor>
+            <Cursor fx:constant="HAND" />
+        </cursor>
+    </Button>
+</AnchorPane>
